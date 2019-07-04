@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="AttuneWWPresentation.SearchControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:AttuneWWPresentation"
+             mc:Ignorable="d"
+             d:DesignHeight="50" d:DesignWidth="250">
+    <Border BorderThickness="1" BorderBrush="LightGray">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80*" />
+                    <ColumnDefinition Width="20*" />
+                </Grid.ColumnDefinitions>
+                <TextBox VerticalAlignment="Center" Name="textBoxSearchString" Grid.Row="0" BorderThickness="0" Grid.Column="0" />
+                <Rectangle Name="RectangleImageLoader" Grid.Row="0" Grid.Column="1" >
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="/Resources/SearchIcon.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Grid>
+    </Border>
+</UserControl>

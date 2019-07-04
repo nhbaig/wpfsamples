@@ -1,0 +1,105 @@
+﻿<UserControl x:Class="AttuneWWPresentation.FavoritesWorklistControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:AttuneWWPresentation"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="20*" />
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="20*" />
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="20*" />
+            <ColumnDefinition Width="5*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="20*" />
+        </Grid.RowDefinitions>
+        <Grid x:Name="FirstColumnGrid" Grid.Row="0" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="12*" />
+                <RowDefinition Height="12*" />
+                <RowDefinition Height="8*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="8*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="8*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="8*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="1" Name="labelHeader" Content="SELECT FAVORITED WORKLIST(S)" FontWeight="Bold" FontSize="15" />
+            <Label Grid.Row="3" Name="labelTaskOwner" Content="Task Owner" FontWeight="Bold" FontSize="13" />
+            <local:SearchControl Grid.Row="4" x:Name="searchTaskOwner" />
+            <Label Grid.Row="6" Name="labelWorkListname" Content="Worklist Name" FontWeight="Bold" FontSize="13" />
+            <local:SearchControl Grid.Row="7" x:Name="searchWorklistname" />
+            <Label Grid.Row="9" Name="labelLocations" Content="Location(s)" FontWeight="Bold" FontSize="13" />
+            <local:SearchControl Grid.Row="10" x:Name="searchLocations" />
+            <Label Grid.Row="12" Name="labelDeliverableGrades" Content="Deliverable Grades" FontWeight="Bold" FontSize="13" />
+            <local:SearchControl Grid.Row="13"  x:Name="searchDeliverableGrades" />
+        </Grid>
+        <Grid x:Name="secondColumnGrid" Grid.Row="0" Grid.Column="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="32*" />
+                <RowDefinition Height="8*" />
+                <RowDefinition Height="40*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                </Grid.RowDefinitions>
+                <Label Name="labelWorkListTypeHeader" Grid.Row="1" Content="Worklist Type" FontWeight="Bold" />
+                <CheckBox Grid.Row="2" x:Name="checkBoxPublic" Content="Public" FontWeight="Bold" />
+                <CheckBox Grid.Row="3" x:Name="checkBoxPrivate" Content="Private" FontWeight="Bold" />
+                <CheckBox Grid.Row="4" x:Name="checkBoxFavorited" Content="Favorited" IsChecked="True" FontWeight="Bold" />
+            </Grid>
+            <Grid Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" x:Name="labelSymbolKey" Content="Symbol Key" FontWeight="Bold" />
+                <Label Grid.Row="1" x:Name="labelPrivateWorklist" Content="Private Worklist" FontWeight="Bold" />
+                <Label Grid.Row="2" x:Name="labelPublicWorklist" Content="Public Worklist" FontWeight="Bold" />
+                <Label Grid.Row="3" x:Name="labelLockedPublicWorklist" Content="Locked Public Worklist" FontWeight="Bold" />
+                <Label Grid.Row="4" x:Name="labelFavoritedWorklist" Content="Favorited Worklist" FontWeight="Bold" />
+            </Grid>
+        </Grid>
+        <Grid x:Name="thirdColumnGrid" Grid.Row="0" Grid.Column="5">
+            <TextBlock TextWrapping="Wrap" Text="Here, there shouldn't be any hard coded content. All the data has to be retrieved from the server about users favorite locations. This data must also be removed." FontWeight="Bold" />
+        </Grid>
+        <Grid x:Name="rowTwoButtonsGrid" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*" />
+                <RowDefinition Height="80*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*" />
+                <ColumnDefinition Width="8*" />
+                <ColumnDefinition Width="20*" />
+                <ColumnDefinition Width="8*" />
+                <ColumnDefinition Width="20*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Grid.Row="0" x:Name="buttonUnfavorite" Content="Unfavorite" />
+            <Button Grid.Column="2" Grid.Row="0" x:Name="buttonSelectAll" Content="Select All" />
+            <Button Grid.Column="4" Grid.Row="0" x:Name="buttonOpen" Content="Open" />
+        </Grid>
+    </Grid>
+</UserControl>

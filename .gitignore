@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/AttuneWWPresentation/v16
+/AttuneWWPresentation/bin/Debug
+/AttuneWWPresentation/obj/Debug
+/.vs
+/AttuneWWPresentation/obj/Release
